@@ -2,6 +2,7 @@ package games.gusdev.KAppTemperatureConverter
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.RadioButton
@@ -27,14 +28,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun converter(view: View) {
+    fun converter(view : View) {
 
         var temp : Double =  tempValue.text.toString().toDouble()
 
         if (radioC.isChecked) {
             temp = (temp - 32) * 5/9
         } else if (radioF.isChecked) {
-            temp = (temp * 5/9 + 32)
+            temp = temp * 9/5 + 32
         }
 
         tempValue.setText(temp.toString())

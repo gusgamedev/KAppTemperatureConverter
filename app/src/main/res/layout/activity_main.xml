@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/valorTemp"
             android:hint="Digite a temperatura"
+            android:inputType="numberDecimal"
     />
     <RadioGroup
             android:layout_width="match_parent"
